@@ -106,6 +106,7 @@ public final class PHP5File extends JavaInterpreter {
 
 		fileWriter = new StringBuilder(1000);
 		fileWriter.append("<?php\n");
+    fileWriter.append("\tinclude_once(\"PHPHelper.php\");\n");
 		writeClass(m_javaFile.getMainClass());
 		fileWriter.append("?>");
 
@@ -322,8 +323,8 @@ public final class PHP5File extends JavaInterpreter {
 		}
 
 		if(m_includeMain) {
-			//writeType(curClass.getClassName());
-			//fileWriter.append("::main(Translator_JavaBase::getArgs());\n");
+			writeType(curClass.getClassName());
+			fileWriter.append("::main(Translator_JavaBase::getArgs());\n");
 		}
 
 		writeInternalClasses();

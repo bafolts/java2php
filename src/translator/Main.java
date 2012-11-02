@@ -12,8 +12,6 @@ public final class Main {
 	private static ArrayList<String> m_aFilesToParse = new ArrayList<String>();
 	private static ArrayList<String> aSearchPaths = new ArrayList<String>();
 	private static ArrayList<String> aClassPaths = new ArrayList<String>();
-	
-	
 
 	private static void getFilesForDirectory(File f) {
 		if(!f.isDirectory()) {
@@ -30,7 +28,7 @@ public final class Main {
 
 	}
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
 		if(args.length==0) {
 
@@ -63,7 +61,7 @@ public final class Main {
 
 		}
 
-    }
+  }
 	
 	private static void translateFile(String sName,String sClassDir) {
 
@@ -95,7 +93,7 @@ public final class Main {
 			sDir.mkdirs();
 		}
 
-		sName += "/" + f.getMainClass().getClassName().getName() + ".class.php";
+		sName += (sClassDir.isEmpty()?"":"/") + f.getMainClass().getClassName().getName() + ".class.php";
 
 		try {
 			PHP5File php5File = new PHP5File(f);
@@ -107,6 +105,5 @@ public final class Main {
 		}
 
 	}
-
 
 }
