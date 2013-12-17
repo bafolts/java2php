@@ -16,7 +16,7 @@ Example Usage:
       php HelloWorld.class.php
 ```
 
-* Windows users can run this command quickly with runExample.bat
-* Linux users can run this command quickly with runExample.sh
+* Windows users can run this command quickly with the [runExample batch script](runExample.bat).
+* Linux users can run this command quickly with the [runExample shell script](runExample.sh).
 
 
