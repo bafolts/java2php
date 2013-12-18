@@ -54,4 +54,15 @@ function __concat() {
 	return new java_lang_String(implode(func_get_args()));
 }
 
+function __attemptServletLoad($oServletClass) {
+
+	if (isset($_SERVER['HTTP_HOST'])) {
+
+		$oServlet = new $oServletClass();
+		$oServlet->service(new javax_servlet_http_HttpServletRequest(), new javax_servlet_http_HttpServletResponse());
+
+	}
+
+}
+
 ?>

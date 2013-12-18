@@ -1,8 +1,16 @@
+import javax.servlet.http;
 
-public class HelloWorld {
+/**
+ * Represents a service for the classic hello world program.
+ */
+public class HelloWorld extends javax.servlet.http.HttpServlet {
 
-  public static void main(String[] args) {
-    System.out.println("Hello World");
-  }
+	/**
+	 *	The GET Handler. This will output the classic message.
+	 */
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+	{
+		resp.getWriter().print("Hello World!");
+	}
 
 }

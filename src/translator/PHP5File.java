@@ -317,6 +317,8 @@ public final class PHP5File extends JavaInterpreter {
 
 		writeClassProperties();
 
+		writeServletHook();
+
 		if(hasStaticProperty(curClass)) {
 			writeType(curClass.getClassName());
 			fileWriter.append("::_initStaticVars();\n");
@@ -330,6 +332,18 @@ public final class PHP5File extends JavaInterpreter {
 		writeInternalClasses();
 		writeEnumDeclarations();
 
+	}
+	
+	/**
+	 * Attempts to load an HttpServlet manually.
+	 * @todo - Add check if the base class extends HttpServlet.
+	 */
+	private void writeServletHook() {
+		
+		fileWriter.append("__attemptServletLoad('");
+		writeType(curClass.getClassName());
+		fileWriter.append("');");
+		
 	}
 
 	private void writeClassProperties() {
