@@ -1089,6 +1089,14 @@ public final class PHP5File extends JavaInterpreter {
 		}
 	}
 
+	/**
+	 * Returns the full class name for a given type relative to this class.
+	 * This allows the PHP to know the class that is being used and removes
+	 * any need for namespacing. Namespacing can be hit or miss within different
+	 * versions of PHP.
+	 * @param t The type to get the PHP namespaced class name for.
+	 * @returns String The PHP namespaced class name.
+	 */
 	private String getFullClassName(Type t) {
 		String sName = t.getName();
 		if(m_java.getMainClass().getClassName().getName().equals(sName)) {

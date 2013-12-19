@@ -1,5 +1,5 @@
 package PLACEHOLDERS;
 
-public class HttpServlet {
+public abstract class HttpServlet {
 
 }

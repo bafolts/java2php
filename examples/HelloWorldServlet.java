@@ -1,9 +1,9 @@
-import javax.servlet.http;
+import javax.servlet.http.*;
 
 /**
  * Represents a service for the classic hello world program.
  */
-public class HelloWorldServlet extends javax.servlet.http.HttpServlet {
+public class HelloWorldServlet extends HttpServlet {
 
 	/**
 	 *	The GET Handler. This will output the classic message.
