@@ -1,13 +1,9 @@
 package PLACEHOLDERS;
 
-public class HttpServletRequest {
+public interface HttpServletRequest {
 
-	public java.util.Map<java.lang.String,java.lang.String[]> getParameterMap() {
-		return null;
-	}
+	java.util.Map<java.lang.String, java.lang.String[]> getParameterMap();
 
-	public java.lang.String getServletPath() {
-		return null;
-	}
+	java.lang.String getServletPath();
 
 }

@@ -59,7 +59,7 @@ function __attemptServletLoad($oServletClass) {
 	if (isset($_SERVER['HTTP_HOST'])) {
 
 		$oServlet = new $oServletClass();
-		$oServlet->service(new javax_servlet_http_HttpServletRequest(), new javax_servlet_http_HttpServletResponse());
+		$oServlet->service(new translator_http_HttpServletRequest(), new translator_http_HttpServletResponse());
 
 	}
 
