@@ -13,6 +13,6 @@ You will need Maven to compile and run the provided example HelloWorld Servlet.
 * Windows users can compile the example quickly with the [runExample batch script](runExample.bat).
 * Linux users can compile the example quickly with the [runExample shell script](runExample.sh).
 
-After the shell script has ran 'HelloWorld.class.php' should be created. To then run the servlet a server will have to be setup so that HelloWorld.class.php can be hit directly from a browser. If you happen to have a server setup at localhost then hitting (http://localhost/HelloWorld.class.php) should output the famous message.
+After the shell script has ran, 'HelloWorldServlet.class.php' should be created. To then run the servlet a server will have to be setup so that HelloWorldServlet.class.php can be hit directly from a browser. If you happen to have a server setup at localhost then hitting (http://localhost/HelloWorldServlet.class.php) should output the famous message.
 
 
