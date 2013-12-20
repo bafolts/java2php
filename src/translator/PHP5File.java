@@ -340,9 +340,15 @@ public final class PHP5File extends JavaInterpreter {
 	 */
 	private void writeServletHook() {
 		
-		fileWriter.append("__attemptServletLoad('");
-		writeType(curClass.getClassName());
-		fileWriter.append("');");
+		// Determine if this class extends javax.http.servlet.HttpServlet
+		// TODO - this will only work directly for now.
+		if (getFullClassName(curClass.getExtends()).equals("javax.servlet.http.HttpServlet")) {
+
+			fileWriter.append("__attemptServletLoad('");
+			writeType(curClass.getClassName());
+			fileWriter.append("');");
+
+		}
 		
 	}
 
